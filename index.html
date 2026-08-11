@@ -333,12 +333,13 @@
         <h3>FloodGuard AI</h3>
         <p class="role">IoT flood early-warning system</p>
         <p class="why">Flash floods often give communities too little warning to get to safety in time.</p>
-        <p class="desc">A <b>LoRa sensor network</b> (923 MHz, Heltec WiFi LoRa 32 V3) with an HC-SR04 ultrasonic sensor and YL-83 rain sensor, reporting to a Flask dashboard with live water level, rainfall, and risk status. A <b>Random Forest</b> classifier sorts flood risk into Low/Medium/High, beating a threshold baseline by 17 points. Across a 144-day field deployment: 99.0% accuracy on the held-out test set, 92.9% on 420 real sensor readings, 100% LoRa packet delivery indoors, and 1.6 cm sensor MAE against reference measurements.</p>
+        <p class="desc">A <b>LoRa sensor network</b> (923 MHz, Heltec WiFi LoRa 32 V3) with an HC-SR04 ultrasonic sensor and YL-83 rain sensor, reporting to a Flask + WebSocket dashboard with live water level, rainfall, and risk status. A <b>Random Forest</b> classifier sorts flood risk into Low/Medium/High, beating a threshold baseline by 17 points. Every reading is logged to a <b>SQLite</b> database queried live for the dashboard and event log, with one-click <b>Excel export</b> (10 min/1 hr/24 hr/all-time) for reporting and analysis. Across a 144-day field deployment: 99.0% accuracy on the held-out test set, 92.9% on 420 real sensor readings, 100% LoRa packet delivery indoors, and 1.6 cm sensor MAE against reference measurements.</p>
         <div class="tags">
           <span class="tag">LoRa 923MHz</span>
           <span class="tag">Random Forest</span>
-          <span class="tag">Flask dashboard</span>
-          <span class="tag">Solar-powered</span>
+          <span class="tag">SQLite + SQL</span>
+          <span class="tag">Excel/BI export</span>
+          <span class="tag">Flask + WebSocket</span>
           <span class="tag">© Copyrighted work</span>
         </div>
         <a class="report-link" href="floodguard-ai-report.pdf" target="_blank" rel="noopener">Read the full IEEE-format paper</a>
@@ -476,6 +477,7 @@
         <span class="k">Applied ML</span>
         <ul>
           <li><b>TensorFlow / Keras</b></li>
+          <li>CNN architectures</li>
           <li>scikit-learn</li>
           <li>TFLite INT8 quantisation</li>
         </ul>
@@ -493,7 +495,16 @@
         <ul>
           <li><b>Python / PyCharm</b></li>
           <li>Flask + Socket.IO</li>
-          <li>Pandas</li>
+          <li>Pandas / NumPy</li>
+          <li>Matplotlib</li>
+        </ul>
+      </div>
+      <div class="toolkit-cell">
+        <span class="k">Data / SQL / BI</span>
+        <ul>
+          <li><b>SQLite</b></li>
+          <li>SQL queries &amp; schema design</li>
+          <li>Excel/BI reporting (openpyxl)</li>
         </ul>
       </div>
       <div class="toolkit-cell">
@@ -605,7 +616,7 @@
       <p class="availability">Open to relocation · Available from August 2026</p>
       <div class="contact-links">
         <a class="contact-btn primary" href="mailto:akmalharith1919@gmail.com">akmalharith1919@gmail.com</a>
-        <a class="contact-btn" href="https://wa.me/601118941603" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="contact-btn" href="https://wa.me/60118941603" target="_blank" rel="noopener">WhatsApp</a>
         <a class="contact-btn" href="https://www.linkedin.com/in/muhamad-akmal-harith-mohd-bakhtiar-49a1a7254" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
